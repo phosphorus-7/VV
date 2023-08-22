@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    command: python ./my_project/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/work
+    ports:
+      - "8000:8000"
